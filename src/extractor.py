@@ -120,7 +120,13 @@ def extract_gemma(document_text:str, prompt:str, promopt_type:str) -> dict:
     return mock_output
 
 def save_yaml(kde_dict: dict, original_pdf_name: str, output_dir: str) -> str:
-    ...
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+    yaml_file = output_path / f"{original_pdf_name}-kdes.yaml"
+
+    with open(yaml_file, "w", encoding="utf-8") as file:
+        yaml.dump(kde_dict, file)
+    return yaml_file
 
 def save_llm_output_log(llm_name: str, prompt_used :str, prompt_type: str, llm_output:str, output_file: str) -> None:
     ...
