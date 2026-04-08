@@ -1,6 +1,6 @@
 from src.extractor import load_documents
 from src.extractor import build_zero_shot_prompt, build_few_shot_prompt, build_cot_prompt
-from src.extractor import save_yaml
+from src.extractor import save_yaml, save_llm_output_log
 import yaml
 import pytest
 from pathlib import Path
@@ -42,3 +42,18 @@ def test_save_yaml(tmp_path):
     with open(yaml_path, "r", encoding="utf-8") as f:
         loaded = yaml.safe_load(f)
     assert loaded["element1"]["name"] == "password data"
+
+def test_save_llm_output_log(tmp_path):
+    output_file = tmp_path / "llm_output.txt"
+    result = save_llm_output_log(
+        llm_name="Gemma-3-1B",
+        prompt_used = "test_prompt",
+        prompt_type="zero-shot",
+        llm_output={"element1": {"name": "audit log data", "requirements": ["retain logs"]}},
+        output_file=str(output_file),
+    )
+
+    assert Path(result).exists()
+    content = output_file.read_text(encoding="utf-8")
+    assert "LLM Name" in content
+    assert "audit log" in content
