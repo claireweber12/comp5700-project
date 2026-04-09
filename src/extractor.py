@@ -2,7 +2,6 @@ from pathlib import Path
 from src.utils import extract_text
 import yaml
 import json
-from typing import Dict, Any
 
 
 def load_documents(pdf_path1: str, pdf_path2: str) -> dict:
@@ -26,53 +25,50 @@ def load_documents(pdf_path1: str, pdf_path2: str) -> dict:
 
 def build_zero_shot_prompt(document_text: str) -> str:
     return f"""
-    Given the following security requirements document, identify the key data elements
-    For each key data element list:
-    1. The name of the key data element
-    2. The requirements associated with that element
-    Return your answer in valid JSON using this format:
-    {{
-        "element1": {{
-            "name": "name of key data element",
-            "requirements": [
-                "requirement 1",
-                "requirement 2"
-            ]
-        }}
-    }}
-    Document:{document_text}
+    Use the table of contents to determine the key data elements listed in the document and their associated requirements. Sections are numbered on 
+    the table of contents with KDEs numbered underneath them as subsections. The KDE's associated requirements are numbered under the KDE as subsections.
+    One KDE can map to multiple requirements. Ignore section headers which are numbered as whole numbers. 
+    Generate a nested dictonary with the following fields: 
+    - element1:
+        - name:
+        - requirements: 
+            - req1
+            - req2 
+            - req3 
     """.strip()
 
 def build_few_shot_prompt(document_text:str) -> str:
     return f"""
-    Given the following security requirements document, identify the key data elements
-    For each key data element list:
-    1. The name of the key data element
-    2. The requirements associated with that element
-    Return your answer in valid JSON using this format:
-    {{
-        "element1": {{
-            "name": "name of key data element",
-            "requirements": [
-                "requirement 1",
-                "requirement 2"
-            ]
-        }}
-    }}
+    Use the table of contents to determine the key data elements listed in the document and their associated requirements. Sections are numbered on 
+    the table of contents with KDEs numbered underneath them as subsections. The KDE's associated requirements are numbered under the KDE as subsections.
+    One KDE can map to multiple requirements. Ignore section headers which are numbered as whole numbers. 
+    Generate a nested dictonary with the following fields: 
+    - element1:
+        - name:
+        - requirements: 
+            - req1
+            - req2 
+            - req3 
+    
     For Example:
-    Document snippet: "The system shall encrypt passwords and maintain audit logs for login attempts."
+    Document snippet: 
+    1. Authentication
+        1.1 Password data
+            1.1.1 passwords shall be encrypted
+        1.2 Audit log data 
+            1.2.1 Audit logs shall be maintained for login attempts 
     Output:
     {{
         "element1": {{
-            "name": "password data",
+            "name": "Password data",
             "requirements": [
-                "passwords shall be encrypted",
+                "Passwords shall be encrypted",
             ]
         }}
         "element2":{{
-            "name": "audit log data",
+            "name": "Audit log data",
             "requirements": [
-                "audit logs shall be maintained for login attempts"
+                "Audit logs shall be maintained for login attempts"
             ]
         }}
     }}
@@ -81,11 +77,17 @@ def build_few_shot_prompt(document_text:str) -> str:
 
 def build_cot_prompt(document_text:str) -> str:
     return f"""
-    Carefully analyze the security requirements document step by step:
-    1. Read the document
-    2. Identify nouns or noun phrases that represent key data elements
-    3. Determine which requirements refer to each entity
-    4. Group related requirements under the correct key data element 
+    Use the table of contents to determine the key data elements listed in the document and their associated requirements. Sections are numbered on 
+    the table of contents with KDEs numbered underneath them as subsections. The KDE's associated requirements are numbered under the KDE as subsections.
+    One KDE can map to multiple requirements. Ignore section headers which are numbered as whole numbers. 
+    Think through it step by step. 
+    Generate a nested dictonary with the following fields: 
+    - element1:
+        - name:
+        - requirements: 
+            - req1
+            - req2 
+            - req3 
 
     Then, return only the final answer in valid JSON using this format:
     {{
