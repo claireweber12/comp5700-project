@@ -1,0 +1,280 @@
+element1:
+  name: Amazon EKS
+  requirements:
+    req1: Control plane logs provide visibility into operation of the EKS Control
+      plane component systems.
+    req2: Logging is enabled
+    req3: Manage Kubernetes RBAC users with AWS IAM Authenticator for Kubernetes
+element10:
+  name: curl
+  requirements:
+    req1: 'Webhook Authentication is enabled with "authentication": { "webhook": {
+      "enabled": true } }'
+element11:
+  name: client certificate authority file
+  requirements:
+    req1: a client certificate authority file is configured
+element12:
+  name: kubectl proxy
+  requirements:
+    req1: kubectl proxy --port=8080
+element13:
+  name: example configuration
+  requirements:
+    req1: example configuration should be clear
+element14:
+  name: streamingConnectionIdleTimeout
+  requirements:
+    req1: If the streaming-connection-idle-timeout argument is not present in the
+      output of the above command, refer instead to the config argument that specifies
+      the location of the Kubelet config file e.g. --config /etc/kubernetes/kubelet/kubelet-config.json
+    req2: 'If using the api configz endpoint consider searching for the status of
+      "streamingConnectionIdleTimeout": by extracting the live configuration from
+      the nodes running kubelet.'
+element15:
+  name: security configurations
+  requirements:
+    req1: security configurations should be maintained
+    req2: security configurations should be documented
+element16:
+  name: eventRecordQPS
+  requirements:
+    req1: eventRecordQPS argument and determine whether this has been set to an appropriate
+      level for the cluster.
+    req2: If using the api configz endpoint consider searching for the status of eventReco
+    req3: If modifying the Kubelet config file, edit the kubelet-config.json file
+      and set the below parameter
+    req4: 5 or a value greater or equal to 0
+element17:
+  name: node-name
+  requirements:
+    req1: The-Name-Of-Node-To-Extract-Configuration
+element18:
+  name: hostname_port
+  requirements:
+    req1: localhost-and-port-number
+element19:
+  name: RotateCertificate
+  requirements:
+    req1: RotateCertificate is set to true
+element2:
+  name: kubeconfig file
+  requirements:
+    req1: ensure that the file ownership is set to root:root
+element20:
+  name: RotateKubeletServerCertificate
+  requirements:
+    req1: RotateKubeletServerCertificate argument exists in the featureGates section
+      and is set to true
+element21:
+  name: Container-optimized OS
+  requirements:
+    req1: Container-optimized OSes have a smaller footprint
+    req2: Not the default
+element22:
+  name: CIS Controls
+  requirements: {}
+element23:
+  name: Standard Hardening Configuration Templates
+  requirements:
+    req2: Use standard, industry-recommended hardening configuration templates for
+      application infrastructure components.
+element24:
+  name: Standard H
+  requirements:
+    req1: Use standard, industry-recommended hardening configuration templates for
+      application infrastructure components
+element25:
+  name: Kubernetes Roles and ClusterRoles
+  requirements:
+    req1: Minimize wildcard use in Roles and ClusterRoles (Manual)
+element26:
+  name: system:masters
+  requirements:
+    req1: access to create pods should be restricted to the smallest possible group
+      of users.
+element27:
+  name: system:controller:clust
+  requirements:
+    req1: access to create pods should be restricted to the smallest possible group
+      of users.
+element28:
+  name: system:controller:daemon-set-controller
+  requirements:
+    req1: access to create pods should be restricted to the smallest possible group
+      of users.
+element29:
+  name: system:controller:job-controller
+  requirements:
+    req1: access to create pods should be restricted to the smallest possible group
+      of users.
+element3:
+  name: kubelet-config.json
+  requirements:
+    req1: the permissions are 644 or more restrictive
+    req2: If there is an entry for eventRecordQPS check that it is set to 0 or an
+      appropriate level for the cluster.
+element30:
+  name: system:controller:persistent-volume-binder
+  requirements:
+    req1: access to create pods should be restricted to the smallest possible group
+      of users.
+element31:
+  name: system:controller:replicaset-controller
+  requirements:
+    req1: access to create pods should be restricted to the smallest possible group
+      of users.
+element32:
+  name: system:controller:statefulset-controller
+  requirements:
+    req1: access to create pods should be restricted to the smallest possible group
+      of users.
+element33:
+  name: system:controller:service-account-kube-system
+  requirements:
+    req1: access to create pods should be restricted to the smallest possible group
+      of users.
+element34:
+  name: system:controller:clusterrole-aggregation-controller
+  requirements:
+    req1: access to create pods should be restricted to the smallest possible group
+      of users.
+element35:
+  name: default service account
+  requirements:
+    req1: By default the default service account allows for its service account token
+      to be mounted in pods in its namespace.
+element36:
+  name: Service Account Tokens
+  requirements:
+    req1: Mounting service account tokens inside pods can provide an avenue for privilege
+      escalation attacks where an attacker is able to compromise a single pod in the
+      cluster.
+element37:
+  name: client certificate
+  requirements:
+    req1: client certificate which is a member
+element38:
+  name: eks.privileged
+  requirements:
+    req1: eks.privileged allows full unrestricted access to pod features, as if the
+      PodSecurityPolicy controller was not enabled.
+element39:
+  name: PodSecurityPolicy
+  requirements:
+    req1: PodSecurityPolicy defined which does not permit containers to share the
+      host network namespace
+    req2: Pods with containers which require capabilities outwith the default set
+      will not be permitted.
+element4:
+  name: Kubelet
+  requirements:
+    req1: Kubelets can accept configuration via a configuration file and in some cases
+      via command line arguments. It is important to note that parameters provided
+      as command line arguments will override their counterpart parameters in the
+      configuration file (see --config details in the Kubelet)
+    req2: Verify that the Authorization Mode is set to WebHook.
+    req3: Ensure that the --rotate-certificates argument is not present or is set
+      to true (Manual)
+element40:
+  name: PSP
+  requirements:
+    req1: PodSecurityPolicy defined which does not permit containers to share the
+      host network namespace
+element41:
+  name: Use of Dedicated Administrative Accounts
+  requirements:
+    req1: Ensure that all users with administrative account access use a dedicated
+      or secondary account for elevated activities. This account should only be used
+      for administrative activities and not internet browsing, email, or similar activities.
+element42:
+  name: CNI plugin
+  requirements:
+    req1: Ensure CNI plugin supports network policies.
+element43:
+  name: Network Policy
+  requirements:
+    req1: Network Policy in a namespace selecting a particular pod will reject any
+      connections that are not allowed by any Network Policy.
+    req2: Network Policy requires the Network Policy add-on.
+element44:
+  name: Kubernetes Secrets
+  requirements:
+    req1: Kubernetes Secrets supports sensitive data at rest.
+element45:
+  name: security context
+  requirements:
+    req1: Apply Security Context to Your Pods and Containers
+    req2: security contexts control the security parameters that will be assigned
+      to the pod/container/volume.
+element46:
+  name: AWS ECR
+  requirements:
+    req1: Images are not scanned by Default.
+element47:
+  name: aws:ResourceTag
+  requirements:
+    req1: To see a list of Amazon ECR condition keys, see Condition Keys Defined by
+      Amazon Elastic Container Registry in the IAM User Guide.
+element48:
+  name: AWS IAM
+  requirements:
+    req1: Kubernetes workloads should not use cluster node service accounts to authenticate
+      to Amazon EKS APIs. Each Kubernetes workload that needs to authenticate to other
+      AWS services using AWS IAM should be provisioned with a dedicated Service account.
+element49:
+  name: IAM roles for service accounts
+  requirements:
+    req1: By using the IAM roles for service accounts feature, you no longer need
+      to provide extended permissions to the worker node IAM role so that pods on
+      that node can call AWS APIs.
+element5:
+  name: Anonymous Auth
+  requirements:
+    req1: Anonymous authentication is not enabled.
+element50:
+  name: AWS EKS
+  requirements:
+    req1: Secrets Encryption
+element51:
+  name: Endpoint Private Access
+  requirements:
+    req1: Enable Endpoint Private Access to restrict access to the cluster's control
+      plane to only
+element52:
+  name: EKS
+  requirements:
+    req1: EKS is a Kubernetes service
+element53:
+  name: private endpoint
+  requirements:
+    req1: Private Endpoint Access is enabled
+element54:
+  name: Role-Based Access Control
+  requirements:
+    req1: Define and maintain role-based access control, through determining and documenting
+      the access rights necessary for each role within the enterprise to successfully
+      carry out its assigned duties. Perform access control reviews of enterprise
+      assets to validate that all privileges are authorized, on a recurring schedule
+      at a minimum annually, or more frequently.
+element55:
+  name: Fargate
+  requirements:
+    req1: Fargate is not utilized by default
+element6:
+  name: Webhook Authentication
+  requirements:
+    req1: Verify that Webhook Authentication is enabled.
+element7:
+  name: Authorization Mode
+  requirements:
+    req1: Verify that the Authorization Mode is set to WebHook.
+element8:
+  name: Configuration File
+  requirements:
+    req1: Verify that the Authorization Mode is set to WebHook.
+element9:
+  name: Node
+  requirements:
+    req1: Verify that the Authorization Mode is set to WebHook.
+    req2: ip-192.168.31.226.ec2.internal
