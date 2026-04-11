@@ -127,18 +127,19 @@ def extract_gemma_batches(document_text:str, prompt_type:str) -> list:
     return all_outputs 
 
 
-pipe = pipeline("text-generation", model="google/gemma-3-1b-it", device="cpu", dtype=torch.float16)
 
 def extract_gemma(document_text:str, prompt:str, prompt_type:str) -> dict:
+    pipe = pipeline("text-generation", model="google/gemma-3-1b-it", device="cpu", dtype=torch.float16)
+
     messages = [
         
         {
             "role": "system",
-            "content": [{"type":"text", "text":"You analyze documents to find security requirements and return answers in JSON format."}, ]
+            "content":"You are a cybersecurity expert that finds security requirements in documents and returns answers in JSON."
         },
         {
             "role":"user",
-            "content":[{"type":"text", "text": prompt}]
+            "content": prompt
         },
         
     ]

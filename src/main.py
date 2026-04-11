@@ -16,6 +16,10 @@ def main():
     doc1_kdes = merge_kde_results(doc1_results)
     save_yaml(doc1_kdes, "cis-r1", "outputs/yaml")
 
+    doc2_results = extract_gemma_batches(docs["doc2_text"], "few_shot")
+    doc2_kdes = merge_kde_results(doc2_results)
+    save_yaml(doc2_kdes, docs["doc2_name"], "outputs/yaml")
+
 
 
 

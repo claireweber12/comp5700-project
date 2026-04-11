@@ -13,7 +13,7 @@ def test_load_documents():
 def test_build_zero_shot_prompt():
     text= "Passwords must be encrypted."
     prompt = build_zero_shot_prompt(text)
-    assert "key data elements" in prompt
+    assert "Key Data Elements" in prompt
 
 def test_build_few_shot_prompt():
     text = "Passwords must be encrypted."
@@ -25,7 +25,7 @@ def test_build_cot_prompt():
     text = "Passwords must be encrypted."
     prompt = build_cot_prompt(text)
     assert "Passwords must be encrypted." in prompt
-    assert "step by step" in prompt
+    assert "step-by-step" in prompt
 
 def test_save_yaml(tmp_path):
     test_dict = {
