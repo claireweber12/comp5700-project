@@ -62,6 +62,7 @@ def build_batch_text(chunk_batch: list[str]) -> str:
 def merge_kde_results(batch_results: list) -> dict:
     merged = {}
     element_counter = 1
+    JUNK_NAMES = {"example configuration", "examples directly from the text", "cis controls"}
 
     for batch in batch_results:
         output = batch.get("output", {})
@@ -75,6 +76,9 @@ def merge_kde_results(batch_results: list) -> dict:
             name = value.get("name")
             requirements = value.get("requirements", [])
             if not name:
+                continue
+
+            if name.lower() in JUNK_NAMES:
                 continue
 
             existing_key = None
@@ -94,6 +98,8 @@ def merge_kde_results(batch_results: list) -> dict:
                         existing_reqs[f"req{next_idx}"] = req_text
                         next_idx += 1
             else:
+                if not new_reqs:
+                    continue
                 merged[f"element{element_counter}"] = {
                 "name": name,
                 "requirements": dict(new_reqs)
