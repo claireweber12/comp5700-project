@@ -6,6 +6,10 @@ element1:
     req2: Ensure that all options are set to 'Enabled'.
     req3: Manage Kubernetes RBAC users with AWS IAM Authenticator for Kubernetes
 element10:
+  name: read-only-port
+  requirements:
+    req1: Ensure that the --read-only-port argument exists and is set to 0.
+element11:
   name: streamingConnectionIdleTimeout
   requirements:
     req1: If the streaming-connection-idle-timeout argument is not present in the
@@ -14,10 +18,6 @@ element10:
     req2: 'If using the api configz endpoint consider searching for the status of
       "streamingConnectionIdleTimeout": by extracting the live configuration from
       the nodes running kubelet.'
-element11:
-  name: proxy/configz
-  requirements:
-    req1: proxy/configz should be set to true
 element12:
   name: protect-kernel-defaults
   requirements:
@@ -25,211 +25,216 @@ element12:
 element13:
   name: security configurations
   requirements:
-    req1: Ensure that the --hostname-override argument does not exist in the output
-      of the above command.
+    req1: security configurations should be maintained
+    req2: The --eventRecordQPS argument is set to 0 or a level which ensures appropriate
+      event capture (Automated)
 element14:
+  name: RotateCertificate
+  requirements:
+    req1: RotateCertificate is set to true
+element15:
   name: RotateKubeletServerCertificate
   requirements:
-    req1: Ensure that the RotateKubeletServerCertificate argument is set to true (Automated)
-    req2: RotateKubeletServerCertificate argument exists in the featureGates section
-      and is set to true
-element15:
+    req1: RotateKubeletServerCertificate argument exists in the featureGates section
+      and is set to true.
+element16:
   name: Container-optimized OS
   requirements:
-    req1: Use standard hardening configuration templates for application infrastructure
-      components.
-element16:
-  name: Kubernetes API
-  requirements:
-    req1: Minimize access to secrets
+    req1: Container-optimized OS is designed for secure managed hosting of containers
+      on compute instances.
 element17:
-  name: system:masters
+  name: Kubernetes Roles and ClusterRoles
   requirements:
-    req1: access to create pods should be restricted to the smallest possible group
-      of users.
+    req1: Minimize wildcard use in Roles and ClusterRoles (Manual)
 element18:
-  name: system:controllers
-  requirements:
-    req1: access to create pods should be restricted to the smallest possible group
-      of users.
+  name: system:masters
+  requirements: {}
 element19:
-  name: system:controller
-  requirements:
-    req1: access to create pods should be restricted to the smallest possible group
-      of users.
+  name: system:controller:clust
+  requirements: {}
 element2:
   name: kubeconfig file
   requirements:
-    req1: Ensure that the kubelet kubeconfig file is set to root:root
+    req1: set to 644 or more restrictive
 element20:
-  name: serviceAccount
-  requirements:
-    req1: access to create pods should be restricted to the smallest possible group
-      of users.
+  name: system:controller:clusterrole-aggregation-controller
+  requirements: {}
 element21:
-  name: clusterrole-aggregation-controller
-  requirements:
-    req1: access to create pods should be restricted to the smallest possible group
-      of users.
+  name: system:controller:daemon-set-controller
+  requirements: {}
 element22:
-  name: persistent-volume-binder
-  requirements:
-    req1: access to create pods should be restricted to the smallest possible group
-      of users.
+  name: system:controller:job-controller
+  requirements: {}
 element23:
-  name: replicaset-controller
-  requirements:
-    req1: access to create pods should be restricted to the smallest possible group
-      of users.
+  name: system:controller:persistent-volume-binder
+  requirements: {}
 element24:
-  name: statefulset-controller
-  requirements:
-    req1: access to create pods should be restricted to the smallest possible group
-      of users.
+  name: system:controller:replicaset-controller
+  requirements: {}
 element25:
+  name: system:controller:statefulset-controller
+  requirements: {}
+element26:
   name: default service account
   requirements:
     req1: By default the default service account allows for its service account token
       to be mounted in pods in its namespace.
-element26:
+element27:
   name: Service Account Tokens
   requirements:
     req1: Mounting service account tokens inside pods can provide an avenue for privilege
       escalation attacks where an attacker is able to compromise a single pod in the
       cluster.
-element27:
+element28:
   name: client certificate
   requirements:
     req1: client certificate which is a member
-element28:
+element29:
   name: eks.privileged
   requirements:
     req1: eks.privileged allows full unrestricted access to pod features, as if the
       PodSecurityPolicy controller was not enabled.
-element29:
-  name: dedicated administrator accounts
-  requirements:
-    req1: "restrict administrator privileges to dedicated administrator accounts on\
-      \ \u25CF \u25CF \u25CF enterprise assets."
-    req2: Restrict Administrator Privileges to Dedicated Administrator Accounts
 element3:
   name: kubelet-config.json
   requirements:
     req1: The file has permissions of 644 or more restrictive.
 element30:
+  name: dedicated administrator accounts
+  requirements:
+    req1: "restrict administrator privileges to dedicated administrator accounts on\
+      \ \u25CF \u25CF \u25CF enterprise assets."
+element31:
   name: PodSecurityPolicy
   requirements:
     req1: PodSecurityPolicy defined which does not permit containers to share the
-      host network namespace.
-    req2: Pods with containers which require capabilities outwith the default set
-      will not be permitted.
-    req3: Ensure that allowedCapabilities is not present in PSPs for the cluster unless
-      it is set to an empty array.
-    req4: Do not generally permit containers with capabilities assigned (Automated).
-element31:
+      host network namespace
+    req2: PodSecurityPolicy should be defined
+    req3: Pods with containers which require capabilities outwith the default set
+      will not be permitted
+element32:
   name: Dedicated Administrative Accounts
   requirements:
-    req1: Do not generally permit containers with capabilities assigned beyond the
-      default set.
-element32:
+    req1: All users with administrative account access should use a dedicated or secondary
+      account for elevated activities. This account should only be used for administrative
+      activities and not internet browsing, email, or similar activities.
+element33:
   name: CNI plugin
   requirements:
-    req1: Ensure CNI plugin supports network policies
-element33:
+    req1: CNI plugin supports network policies
+element34:
   name: Network Policy
   requirements:
-    req1: Network Policy in a namespace selecting a particular pod will reject any
-      connections that are not allowed by any Network Policy.
+    req1: Network Policy is a specification of how selections of pods are allowed
+      to communicate with each other and other network endpoints.
     req2: Network Policy requires the Network Policy add-on.
-element34:
+element35:
   name: Kubernetes Secrets
   requirements:
-    req1: Kubernetes Secrets supports sensitive data at rest
-element35:
+    req1: Kubernetes Secrets supports secrets
+    req2: External secret storage should be used instead of environment variables
+element36:
   name: Administrative Boundaries
   requirements:
     req1: Establish and Maintain Dedicated Computing Resources for All Administrative
       Work
-element36:
-  name: security context
-  requirements:
-    req1: security contexts are defined in the deployment yaml
 element37:
+  name: Kubernetes Namespaces
+  requirements:
+    req1: Use namespaces to isolate your Kubernetes objects.
+element38:
+  name: Network Boundaries
+  requirements:
+    req1: "Maintain an up-to-date inventory of all of the organization\u2019s network\
+      \ boundaries."
+element39:
+  name: Security Context
+  requirements:
+    req1: Apply Security Context to Your Pods and Containers
+    req2: security contexts should be defined as appropriate
+element4:
+  name: Kubelet
+  requirements:
+    req1: Kubelet can accept configuration via a configuration file and in some cases
+      via command line arguments.
+    req2: Verify that the Authorization Mode is set to WebHook.
+    req3: Ensure that the --rotate-certificates argument is not present or is set
+      to true (Manual)
+element40:
   name: Amazon ECR
   requirements:
-    req1: Ensure Image Vulnerability Scanning using Amazon ECR
-element38:
-  name: AWS ECR
+    req1: Ensure Image Vulnerability Scanning using Amazon ECR image scanning or a
+      third party provider
+element41:
+  name: Image Scanning
   requirements:
-    req1: Images are not scanned by Default.
-element39:
+    req1: Please follow AWS ECS or your 3rd party image scanning provider's guidelines
+      for enabling Image Scanning.
+element42:
   name: aws:ResourceTag
   requirements:
     req1: Most Amazon ECR actions support the aws:ResourceTag and ecr:ResourceTag
       condition keys.
-element4:
-  name: kubelet
+element43:
+  name: Administrator Accounts
   requirements:
-    req1: Kubelet can accept configuration via a configuration file and in some cases
-      via command line arguments.
-    req2: Ensure that the --rotate-certificates argument is not present or is set
-      to true (Manual)
-element40:
+    req1: Restrict Administrator Privileges to Dedicated Administrator Accounts
+element44:
   name: AWS IAM
   requirements:
     req1: Kubernetes workloads should not use cluster node service accounts to authenticate
       to Amazon EKS APIs.
-element41:
+element45:
   name: IAM roles for service accounts
   requirements:
     req1: By using the IAM roles for service accounts feature, you no longer need
       to provide extended permissions to the worker node IAM role so that pods on
       that node can call AWS APIs.
-element42:
-  name: AWS EKS
+element46:
+  name: Secrets Encryption
   requirements:
-    req1: Secrets Encryption
-element43:
+    req1: Using AWS Key Management Service (KMS) Customer Managed Keys (CMK)
+element47:
   name: Endpoint Private Access
   requirements:
     req1: Enable Endpoint Private Access to restrict access to the cluster's control
       plane to only
-element44:
+element48:
   name: EKS Cluster Endpoint
   requirements:
     req1: Ensure clusters are created with Private Endpoint Enabled and Public Access
       Disabled (Manual)
-element45:
+element49:
   name: private endpoint
   requirements:
-    req1: private endpoint access to the Kubernetes API server
-element46:
+    req1: Private Endpoint Access is enabled
+element5:
+  name: Anonymous Auth
+  requirements:
+    req1: Anonymous Authentication is not enabled
+element50:
   name: Role-Based Access Control
   requirements:
     req1: Define and maintain role-based access control, through determining and documenting
       the access rights necessary for each role within the enterprise to successfully
       carry out its assigned duties.
-element47:
-  name: Fargate
+element51:
+  name: AWS Fargate
   requirements:
-    req1: Fargate is not utilized by default
-element5:
-  name: Anonymous Auth
-  requirements:
-    req1: Anonymous Authentication is not enabled.
+    req1: AWS Fargate is not utilized
 element6:
-  name: Webhook Authentication
+  name: Kubelet configuration
   requirements:
-    req1: Verify that Webhook Authentication is enabled.
+    req1: 'authentication: { "anonymous": { "enabled": false } }'
 element7:
+  name: curl
+  requirements:
+    req1: The curl command will return the API response which will be a JSON formatted
+      string representing the Kubelet configuration.
+element8:
   name: client certificate authority file
   requirements:
     req1: A client certificate authority file is configured.
-element8:
+element9:
   name: example configuration
   requirements:
     req1: example configuration should be clear
-element9:
-  name: read-only-port
-  requirements:
-    req1: Ensure that the --read-only-port argument exists and is set to 0.

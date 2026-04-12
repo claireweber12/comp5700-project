@@ -1,0 +1,256 @@
+element1:
+  name: Amazon EKS Control Plane
+  requirements:
+    req1: Enable audit Logs (Automated)
+element10:
+  name: kubelet configuration file
+  requirements:
+    req1: the Kubelet config file's ownership is set to root:root
+element11:
+  name: Anonymous Auth
+  requirements:
+    req1: Disable anonymous requests to the Kubelet server.
+element12:
+  name: Anonymous Authentication
+  requirements:
+    req1: Anonymous Authentication is not enabled
+element13:
+  name: Kubelet
+  requirements:
+    req1: Ensure that the --authorization-mode argument is not set to AlwaysAllow
+      (Automated)
+    req2: A client certificate authority file is configured.
+    req3: Kubelet would manage the iptables on the system and keep it in sync.
+element14:
+  name: authentication
+  requirements:
+    req1: 'authentication: { "webhook": { "enabled": true } }'
+element15:
+  name: kubelet.service
+  requirements:
+    req1: Enable Kubelet certificate authentication ensures that the apiserver could
+      authenticate the Kubelet before submitting any requests.
+element16:
+  name: readOnlyPort
+  requirements:
+    req1: readOnlyPort is set to 0
+element17:
+  name: streamingConnectionIdleTimeout
+  requirements:
+    req1: If using the api configz endpoint consider searching for the status of "streamingConnectionIdleTimeout"
+      by extracting the live configuration from the nodes running kubelet.
+element18:
+  name: kubectl get nodes
+  requirements:
+    req1: kubectl get nodes
+element19:
+  name: Amazon EKS documentation
+  requirements:
+    req1: Amazon EKS documentation for the default value
+element2:
+  name: Amazon EKS clusters
+  requirements:
+    req1: Ensure that all options are toggled to 'Enabled'.
+element20:
+  name: RotateCertificate
+  requirements:
+    req1: RotateCertificate:true
+element21:
+  name: RotateKubeletServerCertificate
+  requirements:
+    req1: RotateKubeletServerCertificate causes the kubelet to both request a serving
+      certificate after bootstrapping its client credentials and rotate the certificate
+      as its existing credentials expire.
+element22:
+  name: example configuration
+  requirements:
+    req1: example configuration should be clear
+element23:
+  name: cluster-admin
+  requirements:
+    req1: cluster-admin provides wide-ranging privileges which should only be applied
+      where absolutely necessary.
+element24:
+  name: Kubernetes Roles and ClusterRoles
+  requirements:
+    req1: Use of wildcards in Roles and ClusterRoles is not optimal from a security
+      perspective as it may allow for inadvertent access to be granted when new resources
+      are added to the Kubernetes API either as CRDs or in later versions of the product.
+element25:
+  name: system:controller
+  requirements:
+    req1: Allowlist Authorized Scripts
+element26:
+  name: default service account
+  requirements:
+    req1: Service accounts tokens should not be mounted in pods
+element27:
+  name: Cluster Access Manager API
+  requirements:
+    req1: Amazon EKS has introduced the Cluster Access Manager API to streamline and
+      enhance the management of access controls within EKS clusters.
+    req2: Direct Management via API
+    req3: Immutable Access Entries
+    req4: Fine-Grained Access Control
+    req5: Improved Visibility, Auditing, and Compliance
+    req6: EKS API is selected by default during EKS Cluster creation but can be changed
+      during initial configuration
+element28:
+  name: Enterprise Assets and Software
+  requirements:
+    req1: Uninstall or disable unnecessary services on enterprise assets and software
+element29:
+  name: Persistent Volume
+  requirements:
+    req1: The ability to create persistent volumes in a cluster opens up possibilities
+      for privilege escalation and should be restricted, where possible.
+element3:
+  name: audit logging
+  requirements:
+    req1: Ensure that local logging has been enabled on all systems and networking
+element30:
+  name: validatingwebhookconfigurations
+  requirements:
+    req1: limit access to webhooks
+    req2: remove access to webhooks
+element31:
+  name: spec.hostPID
+  requirements:
+    req1: 'Pods defined with spec.hostPID: true will not be permitted unless they
+      are run under a specific policy.'
+element32:
+  name: hostIPC
+  requirements:
+    req1: 'Pods defined with spec.hostIPC: true will not be permitted unless they
+      are run under a specific policy.'
+element33:
+  name: hostNetwork
+  requirements:
+    req1: 'Pods defined with spec.hostNetwork: true will not be permitted unless they
+      are run under a specific policy.'
+element34:
+  name: allowPrivilegeEscalation
+  requirements:
+    req1: Do not generally permit containers to be run with the allowPrivilegeEscalation
+      flag set to true.
+element35:
+  name: CNI plugin
+  requirements:
+    req1: CNI plugin supports network policies.
+element36:
+  name: Network Policies
+  requirements:
+    req1: Each namespace defined in the cluster has at least one Network Policy.
+element37:
+  name: Kubernetes Secrets
+  requirements:
+    req1: Consider external secret storage (Manual)
+element38:
+  name: Kubernetes
+  requirements:
+    req1: Use namespaces to isolate your Kubernetes objects.
+element39:
+  name: default namespace
+  requirements:
+    req1: Ensure that namespaces are created to allow for appropriate segregation
+      of Kubernetes resources and that all new resources are created in a specific
+      namespace.
+element4:
+  name: audit policy
+  requirements:
+    req1: By default, Kubernetes does not enable detailed audit logging.
+element40:
+  name: Amazon ECR
+  requirements:
+    req1: follow the steps below to start a manual image scan using the AWS Management
+      Console.
+    req2: Configure the Cluster Service Account with Storage Object Viewer Role to
+      only allow read-only access to Amazon ECR
+    req3: Use approved container registries
+element41:
+  name: ecr:CreateRepository
+  requirements:
+    req1: ecr:action2
+element42:
+  name: AWS ECR registries
+  requirements:
+    req1: Kubernetes workloads should not use cluster node service accounts to authenticate
+      to AWS EKS APIs. Each Kubernetes workload that needs to authenticate to other
+      AWS services using AWS IAM should be provisioned with a dedicated Service account.
+element43:
+  name: IAM roles for service accounts
+  requirements:
+    req1: By using the IAM roles for service accounts feature, you no longer need
+      to provide extended permissions to the worker node IAM role so that pods on
+      that node can call AWS APIs.
+element44:
+  name: Secrets Encryption
+  requirements:
+    req1: 'EncryptionConfig: This process can only be perfo'
+element45:
+  name: Endpoint Private Access
+  requirements:
+    req1: "Authorized networks are a way of specifying a restricted range of IP addresses\
+      \ that are permitted to access your cluster's control plane from the public\
+      \ internet. Kubernetes Engine uses both Transport Layer Security (TLS) and authentication\
+      \ to provide secure access to your cluster's control plane from the public internet.\
+      \ This provides you the flexibility to administer your cluster from anywhere;\
+      \ however, you might want to further restrict access to a set of IP addresses\
+      \ that you control. You can set this restriction by specifying an authorized\
+      \ network. Restricting access to an authorized network can provide additional\
+      \ security benefits for your container cluster, including: \u2022 Better protection\
+      \ from outsider attacks: Authorized networks provide an additional layer of\
+      \ security by limiting external access to a specific set of addresses you designate,\
+      \ such as those that originate from your premises. This helps protect access\
+      \ to your cluster in the case of a vulnerability in the cluster's authentication\
+      \ or authorization mechanism. \u2022 Better protection from insider attacks:\
+      \ Authorized networks help protect your cluster from accidental leaks of master\
+      \ certificates from your company's premises. Leaked certificates used from outside\
+      \ Cloud Services and outside the authorized IP ranges (for example, from addresses\
+      \ outside your company) are still denied access."
+element46:
+  name: Private Endpoint Access
+  requirements:
+    req1: Private Endpoint Access is to a valid IP address not set to 0.0.0.0/0
+element47:
+  name: Kubernetes API
+  requirements:
+    req1: Kubernetes API requires an authorized token to perform sensitive actions
+element48:
+  name: AmazonEKSNetworkingPolicy
+  requirements:
+    req1: The implementation of AmazonEKSNetworkingPolicy has a substantial impact
+      on the overall security, compliance, and operational efficiency of Amazon EKS
+      environments.
+    req2: Enable Network Policy enforcement
+element49:
+  name: Amazon EKS
+  requirements:
+    req1: Define and Maintain Role-Based Access Control
+element5:
+  name: kubeconfig file
+  requirements:
+    req1: Ensure that the kubeconfig file permissions are set to 644 or more restrictive.
+    req2: The output of the above command should r
+element50:
+  name: network
+  requirements:
+    req1: as few centralized points of authentication as possible, including network,
+      security, and cloud systems.
+element6:
+  name: Kubelet Service
+  requirements:
+    req1: 'The output should return Active: active (running) since..'
+element7:
+  name: kubeconfig
+  requirements:
+    req1: Verify that if a file is specified and it exists, the permissions are 644
+      or more restrictive.
+element8:
+  name: root:root
+  requirements:
+    req1: The file should be owned by root:root
+element9:
+  name: kubelet config file
+  requirements:
+    req1: the file should be writable by only the administrators on the system

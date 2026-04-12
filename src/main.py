@@ -5,21 +5,48 @@ from extractor import(
     save_yaml
 )
 from utils import merge_kde_results
-from pypdf import PdfReader
 
 
+INPUT_COMBINATIONS = [
+    ("inputs/cis-r1.pdf", "inputs/cis-r1.pdf"),
+    ("inputs/cis-r1.pdf", "inputs/cis-r2.pdf"),
+    ("inputs/cis-r1.pdf", "inputs/cis-r3.pdf"),
+    ("inputs/cis-r1.pdf", "inputs/cis-r4.pdf"),
+    ("inputs/cis-r2.pdf", "inputs/cis-r2.pdf"),
+    ("inputs/cis-r2.pdf", "inputs/cis-r3.pdf"),
+    ("inputs/cis-r2.pdf", "inputs/cis-r4.pdf"),
+    ("inputs/cis-r3.pdf", "inputs/cis-r3.pdf"),
+    ("inputs/cis-r1.pdf", "inputs/cis-r4.pdf"),
+]
+
+PROMPT_TYPES = ["zero_shot", "few_shot", "cot"]
 
 def main():
-    
-    docs = load_documents("inputs/cis-r1.pdf", "inputs/cis-r2.pdf")
-    doc1_results = extract_gemma_batches(docs["doc1_text"], "few_shot")
-    doc1_kdes = merge_kde_results(doc1_results)
-    save_yaml(doc1_kdes, "cis-r1", "outputs/yaml")
+    processed_docs = {}
 
-    doc2_results = extract_gemma_batches(docs["doc2_text"], "few_shot")
-    doc2_kdes = merge_kde_results(doc2_results)
-    save_yaml(doc2_kdes, docs["doc2_name"], "outputs/yaml")
+    for i, (path1, path2) in enumerate(INPUT_COMBINATIONS, start=1):
+        print(f"\nInput-{i}: {path1} + {path2}")
 
+        docs = load_documents(path1, path2)
+
+        for name_key, text_key in [("doc1_name", "doc1_text"), ("doc2_name", "doc2_text")]:
+            doc_name = docs[name_key]
+            doc_text = docs[text_key]
+
+            if doc_name in processed_docs:
+                print(f" Skipping {doc_name} already processed")
+                continue
+
+            print(f"    Processing {doc_name}...")
+            all_results = []
+            for prompt_type in PROMPT_TYPES:
+                print(f"    Running {prompt_type}")
+                results=extract_gemma_batches(doc_text, prompt_type)
+                all_results.extend(results)
+            
+            kdes = merge_kde_results(all_results)
+            save_yaml(kdes, doc_name, "outputs/yaml")
+            processed_docs[doc_name] = True 
 
 
 
