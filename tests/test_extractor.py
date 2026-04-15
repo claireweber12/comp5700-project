@@ -1,9 +1,10 @@
 from src.extractor import load_documents
 from src.extractor import build_zero_shot_prompt, build_few_shot_prompt, build_cot_prompt
-from src.extractor import save_yaml, save_llm_output_log
+from src.extractor import save_yaml, save_llm_output_log, extract_gemma
 import yaml
 import pytest
 from pathlib import Path
+from unittest.mock import patch, MagicMock
 
 def test_load_documents():
     docs = load_documents("inputs/cis-r1.pdf", "inputs/cis-r2.pdf")
@@ -41,6 +42,23 @@ def test_save_yaml(tmp_path):
     with open(yaml_path, "r", encoding="utf-8") as f:
         loaded = yaml.safe_load(f)
     assert loaded["element1"]["name"] == "password data"
+
+def test_extract_gemma(tmp_path):
+    fake_output = [{"generated_text": '{"element1": {"name": "audit log", "requirements": {"req1": "retain logs"}}}'}]
+    mock_pipe = MagicMock(return_value=fake_output)
+
+    with patch("src.extractor.pipeline", return_value=mock_pipe), \
+         patch("src.extractor.save_llm_output_log"):
+        result = extract_gemma(
+            document_text="Audit logs must be retained.",
+            prompt="Identify KDEs.",
+            prompt_type="zero_shot",
+        )
+
+    assert isinstance(result, dict)
+    assert "element1" in result
+    assert result["element1"]["name"] == "audit log"
+
 
 def test_save_llm_output_log(tmp_path):
     output_file = tmp_path / "llm_output.txt"
