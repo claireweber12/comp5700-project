@@ -1,0 +1,68 @@
+Network Boundaries,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Image Scanning,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+private endpoint,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Security Context,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Kubelet configuration,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Role-Based Access Control,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+read-only-port,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+client certificate,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Kubernetes Namespaces,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+eks.privileged,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+RotateKubeletServerCertificate,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+protect-kernel-defaults,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Administrative Boundaries,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+system:controller:clust,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Dedicated Administrative Accounts,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Administrator Accounts,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Service Account Tokens,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+kubelet-config.json,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+EKS Cluster Endpoint,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+security configurations,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+system:masters,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+AWS IAM,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Container-optimized OS,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+RotateCertificate,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Kubernetes Secrets,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+PodSecurityPolicy,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+curl,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Secrets Encryption,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+Anonymous Auth,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+AWS Fargate,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+dedicated administrator accounts,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+aws:ResourceTag,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+client certificate authority file,ABSENT-IN-cis-r2,PRESENT-IN-cis-r1,NA
+ecr:CreateRepository,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+system:controller,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+pod-security.kubernetes.io/warn,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+kubelet config file,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+approved container registries,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Kubernetes,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Network Policies,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+AWS EKS documentation,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+system:controller:service-account,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Cluster Access Manager API,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+hostNetwork,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+ECR registries,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Amazon EKS Control Plane,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Anonymous Authentication,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+allowPrivilegeEscalation,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Amazon EKS documentation,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Kubernetes node,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+secrets,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+CIS Controls,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+default namespace,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Private Endpoint Access,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Kubernetes API,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+kubeconfig,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+audit logging,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Pod Security Admission Controller,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+EKS cluster,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+hostIPC,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+spec.hostPID,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+readOnlyPort,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+AWS EKS,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+cluster-admin,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+root,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+Amazon EKS clusters,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+pod-security.kubernetes.io/enforce,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA
+authentication,ABSENT-IN-cis-r1,PRESENT-IN-cis-r2,NA

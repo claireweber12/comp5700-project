@@ -1,0 +1,69 @@
+system:controller:daemon-set-controller,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Network Boundaries,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Image Scanning,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+private endpoint,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+system:controller:job-controller,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Security Context,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Kubelet configuration,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Role-Based Access Control,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+read-only-port,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+client certificate,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Kubernetes Namespaces,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+eks.privileged,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+protect-kernel-defaults,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Administrative Boundaries,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+system:controller:clusterrole-aggregation-controller,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+system:controller:clust,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Dedicated Administrative Accounts,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Administrator Accounts,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+system:controller:statefulset-controller,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+system:controller:replicaset-controller,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Service Account Tokens,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+kubelet-config.json,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+EKS Cluster Endpoint,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+security configurations,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+system:masters,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+AWS IAM,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Container-optimized OS,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+PodSecurityPolicy,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+curl,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+AWS Fargate,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+dedicated administrator accounts,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+Network Policy,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+aws:ResourceTag,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+client certificate authority file,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+system:controller:persistent-volume-binder,ABSENT-IN-cis-r4,PRESENT-IN-cis-r1,NA
+audit policy,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+ecr:CreateRepository,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+system:controller,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Kubelet Service,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+kubelet config file,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Persistent Volume,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+root:root,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Kubernetes,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Network Policies,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+kubelet.service,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Cluster Access Manager API,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+hostNetwork,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Amazon EKS Control Plane,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Anonymous Authentication,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+allowPrivilegeEscalation,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+network,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+validatingwebhookconfigurations,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Amazon EKS documentation,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+kubelet configuration file,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+default namespace,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Private Endpoint Access,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Kubernetes API,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+kubeconfig,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+audit logging,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+AmazonEKSNetworkingPolicy,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+hostIPC,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+spec.hostPID,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+readOnlyPort,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+AWS ECR registries,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+cluster-admin,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Amazon EKS clusters,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+kubectl get nodes,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+authentication,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA
+Enterprise Assets and Software,ABSENT-IN-cis-r1,PRESENT-IN-cis-r4,NA

@@ -1,0 +1,51 @@
+AWS Policy,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+kubectl proxy,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+pod security policy,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+systemctl,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+privileged containers,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+Amazon ECR Identity-Based Policies,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+AWS IAM Authenticator for Kubernetes,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+audit log management process,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+deprecated feature,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+eventRecordQPS,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+HOSTNAME_PORT,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+ECR registries,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+Role-Based Access Control,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+systemd,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+spec.containers[].securityContext.privileged,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+securityContext.privileged,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+CIS Controls,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+spec.ephemeralContainers[].securityContext.privileged,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+kubelet-config.json,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+EKS Cluster Endpoint,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+NODE_NAME,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+file-check-pod.yaml,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+cluster name,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+kubelet-configuration,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+Pod Security Admission Controller,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+curl,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+Calico Network Policies,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+kubelet,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+spec.initContainers[].securityContext.privileged,ABSENT-IN-cis-r4,PRESENT-IN-cis-r3,NA
+audit policy,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+ecr:CreateRepository,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+Persistent Volume,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+root:root,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+kubelet.service,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+Amazon EKS Control Plane,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+network,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+Kubernetes Roles and ClusterRoles,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+validatingwebhookconfigurations,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+Amazon EKS documentation,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+kubelet configuration file,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+CNI plugin,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+AmazonEKSNetworkingPolicy,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+RotateCertificate,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+readOnlyPort,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+AWS ECR registries,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+Kubelet,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+cluster-admin,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+Amazon EKS clusters,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+kubectl get nodes,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+authentication,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA
+Enterprise Assets and Software,ABSENT-IN-cis-r3,PRESENT-IN-cis-r4,NA

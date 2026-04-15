@@ -1,0 +1,111 @@
+system:controller:daemon-set-controller,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Network Boundaries,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Image Scanning,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+private endpoint,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:job-controller,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Security Context,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Kubelet configuration,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+read-only-port,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+client certificate,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Kubernetes Namespaces,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+eks.privileged,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+protect-kernel-defaults,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Administrative Boundaries,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Kubernetes Roles and ClusterRoles,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:clusterrole-aggregation-controller,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:clust,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Dedicated Administrative Accounts,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Administrator Accounts,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:statefulset-controller,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:replicaset-controller,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Service Account Tokens,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+security configurations,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:masters,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+AWS IAM,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Container-optimized OS,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+CNI plugin,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+RotateCertificate,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+PodSecurityPolicy,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+AWS Fargate,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+dedicated administrator accounts,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Network Policy,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Kubelet,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+aws:ResourceTag,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+client certificate authority file,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:persistent-volume-binder,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+AWS Policy,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+kubectl proxy,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+pod security policy,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+system:controller,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Kubelet Service,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+systemctl,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+privileged containers,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+kubelet config file,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Amazon ECR Identity-Based Policies,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Kubernetes,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Network Policies,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Cluster Access Manager API,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+AWS IAM Authenticator for Kubernetes,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+audit log management process,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+deprecated feature,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+eventRecordQPS,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+HOSTNAME_PORT,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+hostNetwork,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+ECR registries,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Anonymous Authentication,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+systemd,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+allowPrivilegeEscalation,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+spec.containers[].securityContext.privileged,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+securityContext.privileged,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+CIS Controls,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+spec.ephemeralContainers[].securityContext.privileged,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+default namespace,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Private Endpoint Access,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+NODE_NAME,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Kubernetes API,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+kubeconfig,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+file-check-pod.yaml,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+audit logging,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+cluster name,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+kubelet-configuration,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Pod Security Admission Controller,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Calico Network Policies,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+hostIPC,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+spec.hostPID,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+kubelet,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+spec.initContainers[].securityContext.privileged,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+streamingConnectionIdleTimeout,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,If the streaming-connection-idle-timeout argument is not present in the output of the above command, refer instead to the config argument that specifies the location of the Kubelet config file e.g. --config /etc/kubernetes/kubelet/kubelet-config.json
+streamingConnectionIdleTimeout,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,If using the api configz endpoint consider searching for the status of "streamingConnectionIdleTimeout": by extracting the live configuration from the nodes running kubelet.
+streamingConnectionIdleTimeout,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,streamingConnectionIdleTimeout is not set to 0
+kubelet-config.json,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,The file has permissions of 644 or more restrictive.
+kubelet-config.json,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,Webhook Authentication is enabled
+EKS Cluster Endpoint,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,Ensure clusters are created with Private Endpoint Enabled and Public Access Disabled (Manual)
+EKS Cluster Endpoint,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,Enable private endpoint access to the Kubernetes API server
+Amazon ECR,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,Ensure Image Vulnerability Scanning using Amazon ECR image scanning or a third party provider
+Amazon ECR,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,Configure the Cluster Service Account with Storage Object Viewer Role to only allow read-only access to Amazon ECR
+Amazon ECR,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,To utilize AWS ECR for Image scanning please follow the steps below: To create a repository configured for scan on push (AWS CLI) 
+s
+aws ecr create-repository --repository-name $REPO_NAME --image-scanning-configuration scanOnPush=true --region $REGION_CODE
+Amazon ECR,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,To learn about all of the elements that you use in a JSON policy, see IAM JSON Policy Elements Reference
+Amazon ECR,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,Restrict user access to Amazon ECR, limiting interaction with build images to only authorized personnel and service accounts.
+curl,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,The curl command will return the API response which will be a JSON formatted string representing the Kubelet configuration.
+curl,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,curl -sSL "http://${HOSTNAME_PORT}/api/v1/nodes/${NODE_NAME}/proxy/configz"
+Role-Based Access Control,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,Define and maintain role-based access control, through determining and documenting the access rights necessary for each role within the enterprise to successfully carry out its assigned duties.
+Role-Based Access Control,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,Define and Maintain Role-Based Access Control
+Anonymous Auth,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,Anonymous Authentication is not enabled
+Anonymous Auth,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,Disable anonymous requests to the Kubelet server.
+RotateKubeletServerCertificate,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,RotateKubeletServerCertificate argument exists in the featureGates section and is set to true.
+RotateKubeletServerCertificate,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,featureGates: "RotateKubeletServerCertificate:true"
+Endpoint Private Access,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,Enable Endpoint Private Access to restrict access to the cluster's control plane to only
+Endpoint Private Access,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,Authorized networks are a way of specifying a restricted range of IP addresses that are permitted to access your cluster's control plane from the public internet.
+Amazon EKS,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,Ensure that all options are set to 'Enabled'.
+Amazon EKS,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,Manage Kubernetes RBAC users with AWS IAM Authenticator for Kubernetes
+Amazon EKS,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,Minimize Container Registries to only those approved
+Kubernetes Secrets,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,External secret storage should be used instead of environment variables
+Kubernetes Secrets,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,Kubernetes Secrets supports secrets
+Kubernetes Secrets,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,Consider the use of an external secrets storage (Manual)
+Secrets Encryption,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,Using AWS Key Management Service (KMS) Customer Managed Keys (CMK)
+Secrets Encryption,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,EncryptionConfig: This process can only be performed during Cluster Creation.
+kubeconfig file,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,set to 644 or more restrictive
+kubeconfig file,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,Ensure that the proxy kubeconfig file has permissions of 644 or more restrictive.
+kubeconfig file,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,The file should be writable by only the administrators on the system.

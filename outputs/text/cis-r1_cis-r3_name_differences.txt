@@ -1,0 +1,76 @@
+system:controller:daemon-set-controller,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Network Boundaries,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Image Scanning,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+private endpoint,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:job-controller,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Security Context,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Kubelet configuration,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+read-only-port,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+client certificate,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Kubernetes Namespaces,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+eks.privileged,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+protect-kernel-defaults,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Administrative Boundaries,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Kubernetes Roles and ClusterRoles,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:clusterrole-aggregation-controller,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:clust,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Dedicated Administrative Accounts,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Administrator Accounts,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:statefulset-controller,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:replicaset-controller,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Service Account Tokens,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+security configurations,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:masters,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+AWS IAM,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Container-optimized OS,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+CNI plugin,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+RotateCertificate,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+PodSecurityPolicy,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+AWS Fargate,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+dedicated administrator accounts,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Network Policy,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+Kubelet,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+aws:ResourceTag,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+client certificate authority file,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+system:controller:persistent-volume-binder,ABSENT-IN-cis-r3,PRESENT-IN-cis-r1,NA
+AWS Policy,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+kubectl proxy,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+pod security policy,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+system:controller,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Kubelet Service,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+systemctl,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+privileged containers,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+kubelet config file,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Amazon ECR Identity-Based Policies,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Kubernetes,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Network Policies,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Cluster Access Manager API,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+AWS IAM Authenticator for Kubernetes,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+audit log management process,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+deprecated feature,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+eventRecordQPS,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+HOSTNAME_PORT,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+hostNetwork,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+ECR registries,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Anonymous Authentication,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+systemd,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+allowPrivilegeEscalation,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+spec.containers[].securityContext.privileged,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+securityContext.privileged,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+CIS Controls,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+spec.ephemeralContainers[].securityContext.privileged,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+default namespace,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Private Endpoint Access,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+NODE_NAME,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Kubernetes API,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+kubeconfig,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+file-check-pod.yaml,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+audit logging,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+cluster name,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+kubelet-configuration,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Pod Security Admission Controller,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+Calico Network Policies,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+hostIPC,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+spec.hostPID,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+kubelet,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA
+spec.initContainers[].securityContext.privileged,ABSENT-IN-cis-r1,PRESENT-IN-cis-r3,NA

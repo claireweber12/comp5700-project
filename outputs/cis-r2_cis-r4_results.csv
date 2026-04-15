@@ -1,0 +1,11 @@
+FilePath,Severity,Control name,Failed resources,All Resources,Compliance score
+YAMLfiles,Medium,Non-root containers,379,385,1.5584415
+YAMLfiles,High,List Kubernetes secrets,202,914,77.899345
+YAMLfiles,Medium,Ingress and Egress blocked,338,422,19.905214
+YAMLfiles,Medium,Automatic mapping of service account,153,609,74.87685
+YAMLfiles,Medium,Administrative Roles,22,914,97.592995
+YAMLfiles,High,Host PID/IPC privileges,10,385,97.402596
+YAMLfiles,High,HostNetwork access,12,385,96.88312
+YAMLfiles,Medium,Access container service account,688,689,0.14513788
+YAMLfiles,Medium,Missing network policy,338,589,42.6146
+YAMLfiles,High,Anonymous user has RoleBinding,0,285,100.0
